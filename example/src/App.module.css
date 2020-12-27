@@ -1,0 +1,58 @@
+:root {
+  --code-background: #2c203b;
+  --code-text: #f3ece1;
+  --code-object: #f000a8;
+  --code-function: #f6f6f6;
+  --code-glow: #0073e6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--code-text);
+  font-weight: 600;
+}
+a:hover {
+  color: var(--code-object);
+  text-shadow: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-family: "QuickSand", serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+.App > h3 {
+  letter-spacing: 0.1px;
+  margin: 49px 0;
+}
+.App code {
+  background-color: var(--code-background);
+  padding: 3.5px 7px;
+  color: var(--code-text);
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0 0 5px var(--code-glow);
+}
+.codeObject {
+  color: var(--code-object);
+  text-shadow: none;
+}
+.codeFunction {
+  color: var(--code-function);
+  text-shadow: 0 0 3px var(--code-glow);
+}
+.logo > img {
+  width: 400px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+
+  font-size: 9pt;
+}

@@ -1,0 +1,62 @@
+{
+  "name": "use-metamask",
+  "version": "1.0.0",
+  "description": "Connect Metamask with React Hook",
+  "author": {
+    "name": "Muhammed Tanrikulu",
+    "email": "md.tanrikulu@gmail.com",
+    "url": "https://twitter.com/tanrikuIu"
+  },
+  "homapage": "https://mdtanrikulu.github.io/use-metamask",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "blockchain",
+    "web3",
+    "wallet",
+    "crypto",
+    "metamask"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "bump": "npm version",
+    "test": "jest --watch",
+    "test:cov": "jest --coverage --watch",
+    "example": "cd example && yarn install && yarn package",
+    "prepublishOnly": "yarn build",
+    "watch": "nodemon --watch src --exec \"yarn build\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/react-hooks": "^3.7.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdtanrikulu/use-metamask-hook"
+  },
+  "bugs": {
+    "url": "https://github.com/mdtanrikulu/use-metamask-hook/issues"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./test/setupTests.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "example"
+    ]
+  }
+}
