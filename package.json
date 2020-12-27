@@ -7,7 +7,7 @@
     "email": "md.tanrikulu@gmail.com",
     "url": "https://twitter.com/tanrikuIu"
   },
-  "homapage": "https://mdtanrikulu.github.io/use-metamask",
+  "homepage": "https://mdtanrikulu.github.io/use-metamask",
   "keywords": [
     "react",
     "hooks",
@@ -22,8 +22,10 @@
   "scripts": {
     "build": "babel src --out-dir .",
     "bump": "npm version",
-    "test": "jest --watch",
-    "test:cov": "jest --coverage --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:cov:watch": "jest--coverage --watch",
     "example": "cd example && yarn install && yarn package",
     "prepublishOnly": "yarn build",
     "watch": "nodemon --watch src --exec \"yarn build\""
@@ -52,8 +54,9 @@
     "url": "https://github.com/mdtanrikulu/use-metamask-hook/issues"
   },
   "jest": {
+    "rootDir": "./test",
     "setupFilesAfterEnv": [
-      "./test/setupTests.js"
+      "./setupTests.js"
     ],
     "modulePathIgnorePatterns": [
       "example"
