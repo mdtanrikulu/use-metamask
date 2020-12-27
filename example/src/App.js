@@ -20,7 +20,7 @@ function App() {
         }
       })();
     }
-  }, [connect, metaState.isConnected]);
+  }, []);
 
   useEffect(() => {
     const { account, isConnected, web3 } = metaState;

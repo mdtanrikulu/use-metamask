@@ -51,6 +51,7 @@ const useMetamask = () => {
       _isMounted.current = false;
     }
   }, []);
+  
   const connect = async (Web3Interface, settings = {}) => {
     if (!Web3Interface) 
       throw Error("Web3 Provider is required. You can use either ethers.js or web3.js");

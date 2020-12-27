@@ -168,7 +168,7 @@ function App() {
         }
       })();
     }
-  }, [connect, metaState.isConnected]);
+  }, []);
 
 ```
 
