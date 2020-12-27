@@ -1,5 +1,10 @@
+.babelrc
+.git
+.gitignore
+*.test.js
 yarn.lock
 yarn-error.log
+coverage
 example
 node_modules
 src
