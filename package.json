@@ -54,12 +54,17 @@
     "url": "https://github.com/mdtanrikulu/use-metamask-hook/issues"
   },
   "jest": {
-    "rootDir": "./test",
-    "setupFilesAfterEnv": [
-      "./setupTests.js"
+    "collectCoverageFrom": [
+      "src/*.js"
     ],
     "modulePathIgnorePatterns": [
       "example"
+    ],
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setupTests.js"
     ]
   }
 }

@@ -25,4 +25,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn
-    - run: yarn test
+    - run: yarn test:cov
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage/clover.xml
+        flags: unittests
+        name: codecov-use-metamask
+        fail_ci_if_error: true
