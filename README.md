@@ -4,6 +4,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Codecov][codecov-shield]][codecov-url]
 
 
 
@@ -248,4 +249,6 @@ Project Link: [https://github.com/mdtanrikulu/use-metamask](https://github.com/m
 [license-url]: https://github.com/mdtanrikulu/use-metamask/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mdtanrikulu
+[codecov-shield]: https://img.shields.io/codecov/c/github/mdtanrikulu/use-metamask/main?style=for-the-badge
+[codecov-url]: https://codecov.io/gh/mdtanrikulu/use-metamask/
 [product-screenshot]: example/public/screenshot.png
