@@ -76,7 +76,7 @@ Of course, no one hook will serve all projects since your needs may be different
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Easiest option is insalling the package from npm with `npm i use-metamask` or `yarn add use-metamask`.
+Easiest option is installing the package from npm with `npm i use-metamask` or `yarn add use-metamask`.
 
 But if you would like to build a package locally, here what you need;
 

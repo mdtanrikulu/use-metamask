@@ -1,4 +1,5 @@
 .babelrc
+.eslintcache
 .git
 .gitignore
 *.test.js
