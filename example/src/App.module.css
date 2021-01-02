@@ -10,10 +10,22 @@ a {
   text-decoration: none;
   color: var(--code-text);
   font-weight: 600;
+  cursor: pointer;
 }
 a:hover {
   color: var(--code-object);
   text-shadow: none;
+}
+
+select {
+  background: var(--code-background);
+  color: var(--code-text);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0 0 5px var(--code-glow);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  padding: 0 7px;
+  cursor: pointer;
 }
 
 .App {
@@ -24,7 +36,7 @@ a:hover {
 
   text-align: center;
   font-family: "QuickSand", serif;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 }
 .App > h3 {
   letter-spacing: 0.1px;

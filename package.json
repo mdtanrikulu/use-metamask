@@ -25,7 +25,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:cov:watch": "jest--coverage --watch",
+    "test:cov:watch": "jest --coverage --watch",
     "example": "cd example && yarn install && yarn package",
     "prepublishOnly": "yarn build",
     "watch": "nodemon --watch src --exec \"yarn build\""

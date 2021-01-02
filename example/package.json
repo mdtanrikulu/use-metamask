@@ -1,6 +1,6 @@
 {
   "name": "example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "homepage": "https://mdtanrikulu.github.io/use-metamask",
   "dependencies": {
@@ -11,13 +11,14 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "use-metamask": "^1.0.0",
+    "use-metamask": "^1.1.0",
     "web-vitals": "^0.2.4",
     "web3": "^1.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "rm -rf ../docs/ && mv build/ ../docs/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1,26 +1,34 @@
-import { useEffect }           from "react";
+import { useEffect, useState } from "react";
 import { useMetamask }         from "use-metamask";
 import { ethers }              from "ethers";
 import Web3                    from "web3";
 
-import Balance                 from "./Balance";
+import Info                    from "./Info";
 import logo                    from "./assets/logo.svg";
 import styles                  from "./App.module.css";
 
 function App() {
-  const { connect, metaState } = useMetamask();
+  const { connect, metaState }              = useMetamask();
+  const [ web3interface, setWeb3Interface ] = useState("ethers");
 
   useEffect(() => {
-    if (!metaState.isConnected) {
+    if (metaState.isAvailable && !metaState.isConnected) {
       (async () => {
         try {
-          await connect(ethers.providers.Web3Provider, "any");
+          if (web3interface === "ethers")
+            await connect(ethers.providers.Web3Provider, "any");
+          else if (web3interface === "web3")
+            await connect(Web3, "any");
+          else 
+            throw Error(`Unknown web3 interface: ${web3interface}`);
         } catch (error) {
           console.log(error);
         }
       })();
     }
-  }, []);
+  }, [metaState.isAvailable, web3interface]);
+
+  const handleWeb3Selector = (event) => setWeb3Interface(event.target.value);
 
   return (
     <div className={styles.App}>
@@ -34,29 +42,20 @@ function App() {
       <div className={styles.logo}>
         <img src={logo} alt="useMetamask" />
       </div>
-      <div>
-        {!metaState.isConnected ? (
-          `Đapp haven't connected yet`
-        ) : (
-          <>
-            <p>
-              Đapp connected to the{" "}
-              <b>
-                <code>
-                  {metaState.chain.name} - (chain id: {metaState.chain.id})
-                </code>
-              </b>
-            </p>
-            <p>
-              With account{" "}
-              <b>
-                <code>{metaState.account[0]}</code>
-              </b>
-            </p>
-            <Balance />
-          </>
-        )}
-      </div>
+      {
+        metaState.isAvailable
+        ? <Info state={metaState} web3Handler={handleWeb3Selector}/>
+        : <div>
+          <p>You don't have Metamask installed</p>
+          <p>But wait, what is Metamask?</p>
+          <p>
+            <code>
+              <a href="https://metamask.io/">https://metamask.io</a>
+            </code>
+          </p>
+        </div>
+      }
+      
       <div className={styles.footer}>
         I am developed by{" "}
         <code>
