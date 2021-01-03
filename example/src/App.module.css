@@ -24,7 +24,7 @@ select {
   font-weight: 600;
   text-shadow: 0 0 5px var(--code-glow);
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  padding: 0 7px;
+  padding: 3.5px 7px;
   cursor: pointer;
 }
 
