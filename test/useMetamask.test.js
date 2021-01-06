@@ -204,6 +204,16 @@ describe("When Metamask Available", () => {
     });
   });
 
+  test("should change connect status if account disconnected", async () => {
+    modifyRequest(1, ["0xSomething"]);
+    modifyListener(1, []);
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.connect(Web3Interface);
+      expect(result.current.metaState.isConnected).toBe(false);
+    });
+  });
+
   test("should raise warning if given action is null/undefined", async () => {
     // store.js
     Object.defineProperty(typeStateMap, "SET_ACCOUNT", {
