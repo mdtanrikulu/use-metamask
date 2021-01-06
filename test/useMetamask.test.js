@@ -99,7 +99,7 @@ describe("When Metamask Available", () => {
     expect(result.current.metaState.chain.name).toBe("ropsten");
   });
 
-  test("should return ropsten chainName", async () => {
+  test("should return rinkeby chainName", async () => {
     modifyListener(4);
 
     const { result } = renderHook(() => useMetamask(), { wrapper });
