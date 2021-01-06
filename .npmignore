@@ -6,6 +6,7 @@
 yarn.lock
 yarn-error.log
 coverage
+docs
 example
 node_modules
 src
