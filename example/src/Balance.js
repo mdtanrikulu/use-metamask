@@ -1,5 +1,5 @@
-import { useEffect, useState }   from "react";
-import { useMetamask } from "use-metamask";
+import { useEffect, useState } from "react";
+import { useMetamask }         from "use-metamask";
 
 export default function Balance() {
   const { metaState }         = useMetamask();

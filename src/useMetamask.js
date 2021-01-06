@@ -1,5 +1,5 @@
-import { useContext, useEffect, useRef }  from "react";
-import { MetaStateContext, MetaDispatchContext } from "./store";
+import { useContext, useEffect, useState, useRef }  from "react";
+import { MetaStateContext, MetaDispatchContext }    from "./store";
 
 
 const chains = (chainId) => {
@@ -16,9 +16,9 @@ const chains = (chainId) => {
   }
 };
 
-async function getNetwork() {
+async function getNetwork(provider) {
   try {
-    const chainId = await window.ethereum.request({
+    const chainId = await provider.request({
       method: "net_version",
       params: []
     });
@@ -28,9 +28,9 @@ async function getNetwork() {
   }
 }
 
-async function getAccount() {
+async function getAccount(provider) {
   try {
-    const accounts = await window.ethereum.request({
+    const accounts = await provider.request({
       method: "eth_requestAccounts",
       params: []
     });
@@ -45,7 +45,7 @@ const useMetamask = () => {
   const dispatch         = useContext(MetaDispatchContext);
   const _isMounted       = useRef(true);
   const _isConnectCalled = useRef(false);
-
+  const [ provider ]     = useState(window.ethereum);
   useEffect(() => {
     return () => {
       _isMounted.current = false;
@@ -53,23 +53,24 @@ const useMetamask = () => {
   }, []);
   
   const connect = async (Web3Interface, settings = {}) => {
+    if (!provider)                throw Error("Metamask is not available");
     if (!Web3Interface) 
       throw Error("Web3 Provider is required. You can use either ethers.js or web3.js");
-    if (!_isMounted.current)     throw Error("Component is not mounted");
-    if(_isConnectCalled.current) throw Error("Connect method already called");
+    if (!_isMounted.current)      throw Error("Component is not mounted");
+    if (_isConnectCalled.current) throw Error("Connect method already called");
     _isConnectCalled.current = true;
     
     const _web3 = new Web3Interface(
       ...(Object.keys(settings).length 
-        ? [window.ethereum, settings] 
-        : [window.ethereum])
+        ? [provider, settings] 
+        : [provider])
     );
     dispatch({ type: "SET_WEB3", payload: _web3 });
     
-    const _chainInfo = await getNetwork();
+    const _chainInfo = await getNetwork(provider);
     dispatch({ type: "SET_CHAIN", payload: _chainInfo });
 
-    const _account = await getAccount();
+    const _account = await getAccount(provider);
     if (_account.length) {
       dispatch({ type: "SET_CONNECTED", payload: true });
       dispatch({ type: "SET_ACCOUNT", payload: _account });
@@ -89,7 +90,7 @@ const useMetamask = () => {
 
   return {
     connect,
-    metaState: state
+    metaState: { ...state, isAvailable: !!provider },
   };
 }
 
