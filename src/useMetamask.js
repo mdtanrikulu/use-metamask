@@ -16,30 +16,6 @@ const chains = (chainId) => {
   }
 };
 
-async function getNetwork(provider) {
-  try {
-    const chainId = await provider.request({
-      method: "net_version",
-      params: []
-    });
-    return { id: chainId, name: chains(chainId) };
-  } catch (error) {
-    throw Error(error);
-  }
-}
-
-async function getAccount(provider) {
-  try {
-    const accounts = await provider.request({
-      method: "eth_requestAccounts",
-      params: []
-    });
-    return accounts;
-  } catch (error) {
-    throw Error(error);
-  }
-}
-
 const useMetamask = () => {
   const state            = useContext(MetaStateContext);
   const dispatch         = useContext(MetaDispatchContext);
@@ -67,29 +43,60 @@ const useMetamask = () => {
     );
     dispatch({ type: "SET_WEB3", payload: _web3 });
     
-    const _chainInfo = await getNetwork(provider);
-    dispatch({ type: "SET_CHAIN", payload: _chainInfo });
-
-    const _account = await getAccount(provider);
-    if (_account.length) {
-      dispatch({ type: "SET_CONNECTED", payload: true });
-      dispatch({ type: "SET_ACCOUNT", payload: _account });
-    }
+    await getAccounts();
+    await getChain();
+    
+    window.ethereum.on("accountsChanged", (accounts) => {
+      if (!accounts.length) dispatch({ type: "SET_CONNECTED", payload: false });
+      dispatch({ type: "SET_ACCOUNT", payload: accounts });
+    });
 
     window.ethereum.on("chainChanged", (chainId) => {
       const _chainId   = parseInt(chainId, 16).toString();
       const _chainInfo = { id: _chainId, name: chains(_chainId) };
       dispatch({ type: "SET_CHAIN", payload: _chainInfo });
     });
-    window.ethereum.on("accountsChanged", (accounts) => {
-      if (!accounts.length) dispatch({ type: "SET_CONNECTED", payload: false });
-      dispatch({ type: "SET_ACCOUNT", payload: accounts });
-    });
+
     _isConnectCalled.current = false;
   };
 
+  const getAccounts = async () => {
+    try {
+      const accounts = await provider.request({
+        method: "eth_requestAccounts",
+        params: []
+      });
+      if (accounts.length) {
+        dispatch({ type: "SET_CONNECTED", payload: true });
+        dispatch({ type: "SET_ACCOUNT", payload: accounts });
+      }
+      return accounts;
+    } catch (error) {
+      throw Error(error);
+    }
+  }
+
+  const getChain = async () => {
+    try {
+      const chainId = await provider.request({
+        method: "net_version",
+        params: []
+      });
+      const _chainInfo = { id: chainId, name: chains(chainId) };
+      dispatch({ 
+        type: "SET_CHAIN", 
+        payload: _chainInfo 
+      });
+      return _chainInfo;
+    } catch (error) {
+      throw Error(error);
+    }
+  }
+
   return {
     connect,
+    getAccounts,
+    getChain,
     metaState: { ...state, isAvailable: !!provider },
   };
 }
