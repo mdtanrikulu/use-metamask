@@ -199,7 +199,7 @@ function App() {
 // web3: Object { _isProvider: true, anyNetwork: true, _maxInternalBlockNumber: -1024, … }
 ```
 
-Note: If you would like to check if Metamask is whether already connected to your dapp or not, you can call `getAccounts` method beforehand.
+**Note:** If you would like to check if Metamask is whether already connected to your dapp or not, you can call `getAccounts` method beforehand.
 
 You can also get chain information by calling `getChain` method, without a need of calling `connect` method.
 
