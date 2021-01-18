@@ -18,7 +18,7 @@ function App() {
           if (web3interface === "ethers")
             await connect(ethers.providers.Web3Provider, "any");
           else if (web3interface === "web3")
-            await connect(Web3, "any");
+            await connect(Web3);
           else 
             throw Error(`Unknown web3 interface: ${web3interface}`);
         } catch (error) {

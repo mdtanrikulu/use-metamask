@@ -76,11 +76,19 @@ Of course, no one hook will serve all projects since your needs may be different
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Easiest option is installing the package from npm with `npm i use-metamask` or `yarn add use-metamask`.
+### Install via npmjs
 
-But if you would like to build a package locally, here what you need;
+Easiest option is installing the package from npm with;
+```bash
+# via npm
+npm i use-metamask
+# or via yarn
+yarn add use-metamask
+```
 
-### Prerequisites
+But if you would like to build a package locally, follow the below;
+
+### Build from source
 
 You'll need some prerequisites in order to be able build the package.
 * npm > 12.13.0 _(best installing via nvm)_
@@ -181,11 +189,39 @@ function App() {
 // current connected chain id and name 
 // chain: Object { id: "4", name: "rinkeby" }
 
-// if connection is established with at least one metamask account
+// shows if Metamask Extension is whether exist or not in the user's browser
+// isAvailable: true
+
+// shows if connection is established with at least one metamask account
 // isConnected: true
 
 // web3 instance of Web3 interface you provided
 // web3: Object { _isProvider: true, anyNetwork: true, _maxInternalBlockNumber: -1024, … }
+```
+
+**Note:** If you would like to check if Metamask is whether already connected to your dapp or not, you can call `getAccounts` method beforehand.
+
+You can also get chain information by calling `getChain` method, without a need of calling `connect` method.
+
+```js
+const { connect, getAccounts, getChain, metaState } = useMetamask();
+
+useEffect(() => {
+    if (metaState.isAvailable) {
+      (async () => {
+        try {
+          /* you can get the information directly 
+           * by assigning them to a variable, 
+           * or from metaState.account and metaState.chain 
+          */
+          let account = await getAccounts();
+          let chain = await getChain();
+        } catch (error) {
+          console.log(error);
+        }
+      })();
+    }
+  }, []);
 ```
 
 <!-- ROADMAP -->
