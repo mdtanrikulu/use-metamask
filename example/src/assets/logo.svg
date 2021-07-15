@@ -1,69 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="597px" height="601px" viewBox="0 0 597 601" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
-    <title>Artboard</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M92.2778492,183.26235 L92.273629,183.26235 L91.9722772,-8.52651283e-14 L114.857849,-8.52651283e-14 C115.868033,6.07112469 113.752309,12.4521065 108.510679,19.1429455 C103.277841,25.8225607 99.1052591,80.6989147 108.516759,182.747531 L108.524391,182.747531 C108.883,185.919743 108.883,187.4972 109.204373,189.894771 C112.902941,217.487582 86.2734917,238.539604 57.4139303,238.539604 C25.8155491,238.539604 0.2,213.050864 0.2,181.608911 C0.2,171.306249 2.95032165,161.64278 7.76024796,153.3058 C9.36495976,159.440053 10.849852,164.61497 12.2149254,168.830555 C13.9619478,174.225665 15.5726633,178.234609 17.0470719,180.857386 C14.7224823,180.188676 12.6993669,179.893427 12.7899972,181.659821 C12.9411058,184.604944 16.2653054,190.989212 19.4024254,196.284131 C21.2430086,199.390719 26.6761617,207.87175 35.6755694,212.03125 C43.4402832,215.620078 52.5930891,215.767459 57.9890022,215.767459 C76.3909438,215.767459 91.4110442,201.359632 92.2778492,183.26235 Z M102.270785,15.9405941 C105.746607,15.9405941 108.564317,13.1368327 108.564317,9.67821782 C108.564317,6.21960293 105.746607,3.41584158 102.270785,3.41584158 C98.7949627,3.41584158 95.9772523,6.21960293 95.9772523,9.67821782 C95.9772523,13.1368327 98.7949627,15.9405941 102.270785,15.9405941 Z" id="path-1"></path>
-        <filter x="-7.4%" y="-3.6%" width="114.8%" height="107.1%" filterUnits="objectBoundingBox" id="filter-2">
-            <feGaussianBlur stdDeviation="7" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
-            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
-            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0.114470109   0 0 0 0 0.106030992   0 0 0 0 0.106030992  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
-        </filter>
-    </defs>
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(388.000000, 181.000000)">
-            <g id="Combined-Shape">
-                <use fill="#B7B2B9" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                <use stroke="#979797" stroke-width="1" xlink:href="#path-1"></use>
-            </g>
-        </g>
-        <g id="logo" transform="translate(93.000000, 181.000000)" fill-rule="nonzero">
-            <polygon id="Path" stroke="#E2761B" fill="#E2761B" stroke-linecap="round" stroke-linejoin="round" points="242.3 0.5 142.8 74.4 161.2 30.8"></polygon>
-            <g id="Group" transform="translate(2.000000, 0.000000)" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round">
-                <polygon id="Path" points="10.6 0.5 109.3 75.1 91.8 30.8"></polygon>
-                <polygon id="Path" points="204.5 171.8 178 212.4 234.7 228 251 172.7"></polygon>
-                <polygon id="Path" points="0.1 172.7 16.3 228 73 212.4 46.5 171.8"></polygon>
-                <polygon id="Path" points="69.8 103.2 54 127.1 110.3 129.6 108.3 69.1"></polygon>
-                <polygon id="Path" points="181.1 103.2 142.1 68.4 140.8 129.6 197 127.1"></polygon>
-                <polygon id="Path" points="73 212.4 106.8 195.9 77.6 173.1"></polygon>
-                <polygon id="Path" points="144.1 195.9 178 212.4 173.3 173.1"></polygon>
-            </g>
-            <g id="Group" transform="translate(75.000000, 195.000000)" fill="#D7C1B3" stroke="#D7C1B3" stroke-linecap="round" stroke-linejoin="round">
-                <polygon id="Path" points="105 17.4 71.1 0.9 73.8 23 73.5 32.3"></polygon>
-                <polygon id="Path" points="9.23705556e-14 17.4 31.5 32.3 31.3 23 33.8 0.9"></polygon>
-            </g>
-            <polygon id="Path" stroke="#233447" fill="#233447" stroke-linecap="round" stroke-linejoin="round" transform="translate(92.900000, 150.525870) scale(-1, 1) rotate(-1.000000) translate(-92.900000, -150.525870) " points="107 159.951741 78.8 150.2 98.7 141.1"></polygon>
-            <polygon id="Path" stroke="#233447" fill="#233447" stroke-linecap="round" stroke-linejoin="round" points="147.9 158.5 156.2 141.1 176.2 150.2"></polygon>
-            <polygon id="Eye-r" stroke="#233447" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="163.9 153.762544 167.50742 146.2 176.2 150.155124"></polygon>
-            <polygon id="Eyelid-r" fill="#000000" points="167 152.70318 169.434276 147.6 175.3 150.268905"></polygon>
-            <path d="M92.9000001,156.221908 L101.597762,144.341517 L109.2,151.441343 C111.032651,156.335889 110.565984,159.188775 107.8,160 C105.034016,160.811225 100.06735,159.551861 92.9000001,156.221908 Z" id="Eye-l" stroke="#233447" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(101.597762, 152.289943) rotate(-8.000000) translate(-101.597762, -152.289943) "></path>
-            <polygon id="Eyelid-l" fill="#000000" transform="translate(103.550000, 151.859860) rotate(-8.000000) translate(-103.550000, -151.859860) " points="97.9000002 153.547703 102.597762 147.179066 109.2 150.233569 108.317362 156.540655"></polygon>
-            <g id="Group" transform="translate(48.000000, 123.000000)" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round">
-                <polygon id="Path" points="27 89.4 31.8 48.8 0.5 49.7"></polygon>
-                <polygon id="Path" points="127.2 48.8 132 89.4 158.5 49.7"></polygon>
-                <polygon id="Path" points="151 4.1 94.8 6.6 100 35.5 108.3 18.1 128.3 27.2"></polygon>
-                <polygon id="Path" transform="translate(45.292864, 19.083135) scale(-1, 1) rotate(-5.000000) translate(-45.292864, -19.083135) " points="30.0617183 26.3888674 50.508197 18.183582 58.2617183 34.5831349 83.3240089 5.94199173 7.26171829 3.58313491"></polygon>
-            </g>
-            <g id="Group" transform="translate(56.000000, 127.000000)" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round">
-                <polygon id="Path" points="6.39488462e-14 0.1 23.6 46.1 22.8 23.2"></polygon>
-                <polygon id="Path" points="120.3 23.2 119.3 46.1 143 0.1"></polygon>
-                <polygon id="Path" points="56.3 2.6 51 31.5 57.6 65.6 59.1 20.7"></polygon>
-                <polygon id="Path" points="86.8 2.6 84.1 20.6 85.3 65.6 92 31.5"></polygon>
-            </g>
-            <polygon id="Path" stroke="#F6851B" fill="#F6851B" stroke-linecap="round" stroke-linejoin="round" points="148 158.5 141.3 192.6 146.1 195.9 175.3 173.1 176.3 150.2"></polygon>
-            <polygon id="Path" stroke="#F6851B" fill="#F6851B" stroke-linecap="round" stroke-linejoin="round" transform="translate(96.175076, 173.429930) scale(-1, 1) translate(-96.175076, -173.429930) " points="84.2495855 151.85986 78.8 192.1 83.5501527 195 113.550153 173.932467 112.750153 157.163205"></polygon>
-            <polygon id="Path" stroke="#C0AD9E" fill="#C0AD9E" stroke-linecap="round" stroke-linejoin="round" points="148.5 227.3 148.8 218 146.3 215.8 108.6 215.8 106.3 218 106.5 227.3 75 212.4 86 221.4 108.3 236.9 146.6 236.9 169 221.4 180 212.4"></polygon>
-            <polygon id="Path" stroke="#161616" fill="#161616" stroke-linecap="round" stroke-linejoin="round" points="146.1 195.9 141.3 192.6 113.6 192.6 108.8 195.9 106.3 218 108.6 215.8 146.3 215.8 148.8 218"></polygon>
-            <g id="Group" fill="#763D16" stroke="#763D16" stroke-linecap="round" stroke-linejoin="round">
-                <polygon id="Path" points="246.5 79.2 255 38.4 242.3 0.5 146.1 71.9 183.1 103.2 235.4 118.5 247 105 242 101.4 250 94.1 243.8 89.3 251.8 83.2"></polygon>
-                <polygon id="Path" points="3.55271368e-14 38.4 8.5 79.2 3.1 83.2 11.1 89.3 5 94.1 13 101.4 8 105 19.5 118.5 71.8 103.2 108.8 71.9 12.6 0.5"></polygon>
-            </g>
-            <polygon id="Path" stroke="#F6851B" fill="#F6851B" stroke-linecap="round" stroke-linejoin="round" points="235.4 118.5 183.1 103.2 199 127.1 175.3 173.1 206.5 172.7 253 172.7"></polygon>
-            <polygon id="Path" stroke="#F6851B" fill="#F6851B" stroke-linecap="round" stroke-linejoin="round" points="71.8 103.2 19.5 118.5 2.1 172.7 48.5 172.7 79.6 173.1 56 127.1"></polygon>
-            <polygon id="Path" stroke="#F6851B" fill="#F6851B" stroke-linecap="round" stroke-linejoin="round" points="142.8 129.6 146.1 71.9 161.3 30.8 93.8 30.8 108.8 71.9 112.3 129.6 113.5 147.8 113.6 192.6 141.3 192.6 141.5 147.8"></polygon>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 597 601" style="enable-background:new 0 0 597 601;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B7B2B9;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;}
+	.st2{fill:none;stroke:#979797;}
+	.st3{fill:#E2761B;stroke:#E2761B;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill:#E4761B;stroke:#E4761B;stroke-linecap:round;stroke-linejoin:round;}
+	.st5{fill:#D7C1B3;stroke:#D7C1B3;stroke-linecap:round;stroke-linejoin:round;}
+	.st6{fill:#233447;stroke:#233447;stroke-linecap:round;stroke-linejoin:round;}
+	.st7{fill:#CD6116;stroke:#CD6116;stroke-linecap:round;stroke-linejoin:round;}
+	.st8{fill:#E4751F;stroke:#E4751F;stroke-linecap:round;stroke-linejoin:round;}
+	.st9{fill:#F6851B;stroke:#F6851B;stroke-linecap:round;stroke-linejoin:round;}
+	.st10{fill:#C0AD9E;stroke:#C0AD9E;stroke-linecap:round;stroke-linejoin:round;}
+	.st11{fill:#161616;stroke:#161616;stroke-linecap:round;stroke-linejoin:round;}
+	.st12{fill:#763D16;stroke:#763D16;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<desc>Created with Sketch.</desc>
+<g id="Artboard">
+	<g id="Group" transform="translate(388.000000, 181.000000)">
+		<g id="Combined-Shape">
+			<g>
+				<path id="path-1" class="st0" d="M124.11,214.99L124.11,214.99L98.86-139.5l44.27-3.08c2.77,11.61-0.46,24.24-9.7,37.89
+					c-9.22,13.63-9.91,120.35,22.02,316.5l0.01,0c1.12,6.09,1.33,9.14,2.28,13.74c10.87,52.88-37.82,97.19-93.65,101.07
+					C2.97,330.86-50.01,285-54.24,224.17c-1.39-19.93,2.63-38.99,10.82-55.77c3.93,11.65,7.5,21.46,10.71,29.43
+					c4.11,10.2,7.76,17.74,10.97,22.62c-4.59-0.98-8.54-1.28-8.13,2.13c0.69,5.68,7.98,17.58,14.76,27.4
+					c3.98,5.76,15.63,21.44,33.6,28.27c15.5,5.9,33.23,4.95,43.67,4.23C97.75,280,124.87,250.11,124.11,214.99z M120.93-110.05
+					c6.72-0.47,11.8-6.27,11.33-12.96s-6.29-11.74-13.02-11.27c-6.72,0.47-11.8,6.27-11.33,12.96S114.21-109.58,120.93-110.05z"/>
+			</g>
+			<g>
+				<path id="path-1_1_" class="st1" d="M124.11,214.99L124.11,214.99L98.86-139.5l44.27-3.08c2.77,11.61-0.46,24.24-9.7,37.89
+					c-9.22,13.63-9.91,120.35,22.02,316.5l0.01,0c1.12,6.09,1.33,9.14,2.28,13.74c10.87,52.88-37.82,97.19-93.65,101.07
+					C2.97,330.86-50.01,285-54.24,224.17c-1.39-19.93,2.63-38.99,10.82-55.77c3.93,11.65,7.5,21.46,10.71,29.43
+					c4.11,10.2,7.76,17.74,10.97,22.62c-4.59-0.98-8.54-1.28-8.13,2.13c0.69,5.68,7.98,17.58,14.76,27.4
+					c3.98,5.76,15.63,21.44,33.6,28.27c15.5,5.9,33.23,4.95,43.67,4.23C97.75,280,124.87,250.11,124.11,214.99z M120.93-110.05
+					c6.72-0.47,11.8-6.27,11.33-12.96s-6.29-11.74-13.02-11.27c-6.72,0.47-11.8,6.27-11.33,12.96S114.21-109.58,120.93-110.05z"/>
+			</g>
+			<g>
+				<path id="path-1_2_" class="st2" d="M124.11,214.99L124.11,214.99L98.86-139.5l44.27-3.08c2.77,11.61-0.46,24.24-9.7,37.89
+					c-9.22,13.63-9.91,120.35,22.02,316.5l0.01,0c1.12,6.09,1.33,9.14,2.28,13.74c10.87,52.88-37.82,97.19-93.65,101.07
+					C2.97,330.86-50.01,285-54.24,224.17c-1.39-19.93,2.63-38.99,10.82-55.77c3.93,11.65,7.5,21.46,10.71,29.43
+					c4.11,10.2,7.76,17.74,10.97,22.62c-4.59-0.98-8.54-1.28-8.13,2.13c0.69,5.68,7.98,17.58,14.76,27.4
+					c3.98,5.76,15.63,21.44,33.6,28.27c15.5,5.9,33.23,4.95,43.67,4.23C97.75,280,124.87,250.11,124.11,214.99z M120.93-110.05
+					c6.72-0.47,11.8-6.27,11.33-12.96s-6.29-11.74-13.02-11.27c-6.72,0.47-11.8,6.27-11.33,12.96S114.21-109.58,120.93-110.05z"/>
+			</g>
+		</g>
+	</g>
+	<g id="logo" transform="translate(93.000000, 181.000000)">
+		<polygon id="Path" class="st3" points="129.52,-134.47 -63.43,8.84 -27.75,-75.71 		"/>
+		<g id="Group_1_" transform="translate(2.000000, 0.000000)">
+			<polygon id="Path_2_" class="st4" points="58.1,197.71 6.71,276.45 116.66,306.7 148.27,199.46 			"/>
+			<polygon id="Path_5_" class="st4" points="12.72,64.69 -62.91,-2.8 -65.43,115.88 43.56,111.03 			"/>
+			<polygon id="Path_7_" class="st4" points="-59.03,244.45 6.71,276.45 -2.4,200.24 			"/>
+		</g>
+		<g id="Group_2_" transform="translate(75.000000, 195.000000)">
+			<polygon id="Path_8_" class="st5" points="-66.29,81.45 -132.03,49.45 -126.79,92.31 -127.37,110.34 			"/>
+		</g>
+		<polygon id="Path_11_" class="st6" points="-53.54,171.92 -37.44,138.18 1.34,155.83 		"/>
+		<polygon id="Eyelid-r" points="-16.5,160.68 -11.78,150.79 -0.4,155.96 		"/>
+		<g id="Group_3_" transform="translate(48.000000, 123.000000)">
+			<polygon id="Path_13_" class="st7" points="-48.6,74.71 -39.29,153.45 12.1,76.46 			"/>
+			<polygon id="Path_14_" class="st7" points="-2.44,-11.97 -111.43,-7.12 -101.34,48.92 -85.25,15.18 -46.46,32.83 			"/>
+		</g>
+		<g id="Group_4_" transform="translate(56.000000, 127.000000)">
+			<polygon id="Path_17_" class="st8" points="-54.46,28.83 -56.4,73.24 -10.44,-15.97 			"/>
+			<polygon id="Path_19_" class="st8" points="-119.43,-11.12 -124.66,23.79 -122.34,111.05 -109.34,44.92 			"/>
+		</g>
+		<polygon id="Path_20_" class="st9" points="-53.34,171.92 -66.34,238.05 -57.03,244.45 -0.4,200.24 1.54,155.83 		"/>
+		<polygon id="Path_22_" class="st10" points="-52.37,305.34 -51.79,287.31 -56.64,283.04 -93,283.04 -93,323.96 -56.06,323.96 
+			-12.62,293.9 8.71,276.45 		"/>
+		<polygon id="Path_23_" class="st11" points="-57.03,244.45 -66.34,238.05 -93,238.05 -93,283.04 -56.64,283.04 -51.79,287.31 		
+			"/>
+		<g id="Group_5_">
+			<polygon id="Path_24_" class="st12" points="137.67,18.15 154.15,-60.97 129.52,-134.47 -57.03,3.99 14.72,64.69 116.14,94.36 
+				138.64,68.18 128.94,61.2 144.45,47.04 132.43,37.73 147.94,25.9 			"/>
+		</g>
+		<polygon id="Path_26_" class="st9" points="116.14,94.36 14.72,64.69 45.56,111.03 -0.4,200.24 60.1,199.46 150.27,199.46 		"/>
+		<polygon id="Path_28_" class="st9" points="-63.43,115.88 -57.03,3.99 -27.55,-75.71 -93,-75.71 -93,238.05 -66.34,238.05 
+			-65.95,151.17 		"/>
+	</g>
+</g>
 </svg>

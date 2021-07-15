@@ -59,6 +59,8 @@ select {
 }
 .logo > img {
   width: 400px;
+  border-left: 10px solid black;
+  box-shadow: -20px 0 10px -10px #888;
 }
 
 .footer {
