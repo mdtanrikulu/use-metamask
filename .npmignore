@@ -2,6 +2,7 @@
 .eslintcache
 .git
 .gitignore
+.github
 *.test.js
 yarn.lock
 yarn-error.log
