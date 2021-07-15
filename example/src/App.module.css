@@ -58,7 +58,8 @@ select {
   text-shadow: 0 0 3px var(--code-glow);
 }
 .logo > img {
-  width: 400px;
+  width: 300px;
+  margin: 30px 0;
   border-left: 10px solid black;
   box-shadow: -20px 0 10px -10px #888;
 }
