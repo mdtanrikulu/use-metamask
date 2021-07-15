@@ -19,6 +19,12 @@ describe("When Metamask Available", () => {
         if (accounts instanceof Error) throw accounts;
         return accounts;
       }
+      console.log("method", method);
+      if (method === "eth_accounts") {
+        if (accounts instanceof Error) throw accounts;
+        accounts = ["0xSomethingWithoutPermission"]
+        return accounts;
+      }
     })
   }
   const modifyListener = (chainId = 1, accounts = ["0xSomething"]) => {
@@ -180,7 +186,7 @@ describe("When Metamask Available", () => {
         await result.current.connect();
       } catch (error) {
         expect(error.message).toEqual(
-          "Web3 Provider is required. You can use either ethers.js or web3.js"
+          "Web3 Provider is required. You can use either ethers.js or web3.js."
         );
       }
     });
@@ -234,7 +240,7 @@ describe("When Metamask Available", () => {
         result.current.connect(Web3Interface);
         await result.current.connect(Web3Interface);
       } catch (error) {
-        expect(error.message).toEqual("Connect method already called");
+        expect(error.message).toEqual("Connect method already called.");
       }
     });
   });
@@ -248,8 +254,25 @@ describe("When Metamask Available", () => {
       try {
         await result.current.connect(Web3Interface);
       } catch (error) {
-        expect(error.message).toEqual("Component is not mounted");
+        expect(error.message).toEqual("Component is not mounted.");
       }
+    });
+  });
+
+  test("getAccounts should call the account without Metamask permission", async () => {
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.getAccounts();
+      expect(result.current.metaState.isConnected).toBe(true);
+      expect(result.current.metaState.account).toEqual(["0xSomethingWithoutPermission"]);
+    });
+  });
+
+  test("getChain should return current chain information", async () => {
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.getChain();
+      expect(result.current.metaState.chain).toEqual({id: "1", name: "mainnet"});
     });
   });
 });
@@ -276,8 +299,24 @@ describe("When Metamask is not Available", () => {
       try {
         await result.current.connect(Web3Interface);
       } catch (error) {
-        expect(error.message).toEqual("Metamask is not available");
+        expect(error.message).toEqual("Metamask is not available.");
       }
+    });
+  });
+
+  test("getAccounts should return with a warning", async () => {
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.getAccounts();
+      expect(result.current.metaState.account).toEqual([]);
+    });
+  });
+
+  test("getChain should return empty chain information", async () => {
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.getChain();
+      expect(result.current.metaState.chain).toEqual({id: null, name: ""});
     });
   });
 });

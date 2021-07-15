@@ -29,11 +29,11 @@ const useMetamask = () => {
   }, []);
   
   const connect = async (Web3Interface, settings = {}) => {
-    if (!provider)                throw Error("Metamask is not available");
+    if (!provider)                throw Error("Metamask is not available.");
     if (!Web3Interface) 
-      throw Error("Web3 Provider is required. You can use either ethers.js or web3.js");
-    if (!_isMounted.current)      throw Error("Component is not mounted");
-    if (_isConnectCalled.current) throw Error("Connect method already called");
+      throw Error("Web3 Provider is required. You can use either ethers.js or web3.js.");
+    if (!_isMounted.current)      throw Error("Component is not mounted.");
+    if (_isConnectCalled.current) throw Error("Connect method already called.");
     _isConnectCalled.current = true;
     
     const _web3 = new Web3Interface(
@@ -43,7 +43,7 @@ const useMetamask = () => {
     );
     dispatch({ type: "SET_WEB3", payload: _web3 });
     
-    await getAccounts();
+    await getAccounts({ requestPermission: true });
     await getChain();
     
     window.ethereum.on("accountsChanged", (accounts) => {
@@ -60,10 +60,14 @@ const useMetamask = () => {
     _isConnectCalled.current = false;
   };
 
-  const getAccounts = async () => {
+  const getAccounts = async ({ requestPermission } = { requestPermission: false }) => {
+    if (!provider) {
+      console.warn("Metamask is not available.");
+      return;
+    }
     try {
       const accounts = await provider.request({
-        method: "eth_requestAccounts",
+        method: requestPermission ? "eth_requestAccounts" : "eth_accounts",
         params: []
       });
       if (accounts.length) {
@@ -77,6 +81,10 @@ const useMetamask = () => {
   }
 
   const getChain = async () => {
+    if (!provider) {
+      console.warn("Metamask is not available.");
+      return;
+    }
     try {
       const chainId = await provider.request({
         method: "net_version",
