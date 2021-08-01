@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mdtanrikulu/use-metamask-hook"
+    "url": "https://github.com/mdtanrikulu/use-metamask"
   },
   "bugs": {
-    "url": "https://github.com/mdtanrikulu/use-metamask-hook/issues"
+    "url": "https://github.com/mdtanrikulu/use-metamask/issues"
   },
   "jest": {
     "collectCoverageFrom": [
