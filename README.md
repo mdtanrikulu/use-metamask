@@ -63,14 +63,14 @@
 
 [![Product Name Screen Shot][product-screenshot]]()
 
-There are many great Web3 tools available on GitHub, however, I didn't find one that really suit my needs, so I created this simple React Hook. I want to connect to the Metamask as quick as possible from any component, without rewriting all network and account change logic. -- I think this is it.
+There are many great Web3 tools available on GitHub, however, I didn't find one that really suited my needs, so I created this simple React Hook. I want to connect to Metamask as quick as possible from any component, without rewriting all the network and account change logic. -- I think this is it.
 
 Here's why:
 * Your time should be focused on creating your project. A project that solves a problem and helps others
 * You shouldn't be implementing the same logic over and over from scratch
-* You shouldn't need enormous tool boxes when you only want is connection to the wallet.
+* You shouldn't need enormous tool boxes when you only want a connection to the wallet.
 
-Of course, no one hook will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks in advance to all the people who wants put more into the project!
+Of course, no single hook will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks in advance to all the people who wants to put more into the project!
 
 
 <!-- GETTING STARTED -->
@@ -86,7 +86,7 @@ npm i use-metamask
 yarn add use-metamask
 ```
 
-But if you would like to build a package locally, follow the below;
+But if you would like to build a package locally, follow this below;
 
 ### Build from source
 
@@ -146,7 +146,7 @@ ReactDOM.render(
 );
 ```
 
-2. import your hook to your App component
+2. Import your hook to your App component
 ```JS
 import { useEffect, useState } from "react";
 import { useMetamask }         from "use-metamask";
@@ -159,7 +159,7 @@ function App() {
   //...
 ```
 
-3. call `connect` async method with your favorite Web3Interface library
+3. Call `connect` async method with your favorite Web3Interface library
 
 ```JS
 //...
@@ -199,9 +199,9 @@ function App() {
 // web3: Object { _isProvider: true, anyNetwork: true, _maxInternalBlockNumber: -1024, … }
 ```
 
-**Note:** If you would like to check if Metamask is whether already connected to your dapp or not, you can call `getAccounts` method beforehand.
+**Note:** If you would like to check if Metamask is already connected to your dapp or not, you can call `getAccounts` method beforehand.
 
-You can also get chain information by calling `getChain` method, without a need of calling `connect` method.
+You can also get chain information by calling `getChain` method, without the need to call the `connect` method.
 
 ```js
 const { connect, getAccounts, getChain, metaState } = useMetamask();
@@ -234,7 +234,7 @@ See the [open issues](https://github.com/mdtanrikulu/use-metamask/issues) for a 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
