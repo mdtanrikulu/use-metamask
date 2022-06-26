@@ -254,7 +254,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Muhammed Tanrikulu - [@tanrikuIu](https://twitter.com/tanrikuIu) - md.tanrikulu@gmail.com
+Muhammed Tanrikulu - [@md_tanrikulu](https://twitter.com/md_tanrikulu) - md.tanrikulu@gmail.com
 
 Project Link: [https://github.com/mdtanrikulu/use-metamask](https://github.com/mdtanrikulu/use-metamask)
 
