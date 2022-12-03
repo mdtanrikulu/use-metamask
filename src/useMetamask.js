@@ -18,7 +18,6 @@ const chains = (chainId) => {
 
 const useMetamask = () => {
   const state            = useContext(MetaStateContext);
-  const state = useContext(MetaStateContext);
   if (!("window" in globalThis)) {
     return {
       metaState: { ...state, isAvailable: false },
