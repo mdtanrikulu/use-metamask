@@ -11,7 +11,7 @@ describe("When Metamask Available", () => {
 
   const modifyRequest = (chainId = 1, accounts = ["0xSomething"]) => {
     window.ethereum.request.mockImplementation(({ method, _ }) => {
-      if (method === "net_version"){
+      if (method === "eth_chainId"){
         if (chainId instanceof Error) throw chainId;
         return chainId.toString();
       }
@@ -133,6 +133,16 @@ describe("When Metamask Available", () => {
       await result.current.connect(Web3Interface);
     });
     expect(result.current.metaState.chain.name).toBe("kovan");
+  });
+
+  test("should return sepiola chainName", async () => {
+    modifyListener(11155111);
+
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.connect(Web3Interface);
+    });
+    expect(result.current.metaState.chain.name).toBe("sepiola");
   });
 
   test("should return unknown chainName", async () => {
