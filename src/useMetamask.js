@@ -18,6 +18,12 @@ const chains = (chainId) => {
 
 const useMetamask = () => {
   const state            = useContext(MetaStateContext);
+  if (!("window" in globalThis)) {
+    return {
+      metaState: { ...state, isAvailable: false },
+    };
+  }
+  
   const dispatch         = useContext(MetaDispatchContext);
   const _isMounted       = useRef(true);
   const _isConnectCalled = useRef(false);
