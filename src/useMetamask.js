@@ -31,7 +31,6 @@ const useMetamask = () => {
   const [ provider ]     = useState(window.ethereum);
 
   useEffect(() => {
-    if (!_isMounted.current) _isMounted.current = true;
     return () => {
       _isMounted.current = false;
     };
@@ -102,12 +101,12 @@ const useMetamask = () => {
         params: [],
       });
       const chainId = parseInt(chainIdHex, 16).toString();
-      const _chainInfo = { id: chainId, name: chains(chainId) };
+      const chainInfo = { id: chainId, name: chains(chainId) };
       dispatch({
         type: 'SET_CHAIN',
-        payload: _chainInfo,
+        payload: chainInfo,
       });
-      return _chainInfo;
+      return chainInfo;
     } catch (error) {
       throw Error(error);
     }

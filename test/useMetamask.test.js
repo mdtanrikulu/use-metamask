@@ -11,7 +11,7 @@ describe("When Metamask Available", () => {
 
   const modifyRequest = (chainId = 1, accounts = ["0xSomething"]) => {
     window.ethereum.request.mockImplementation(({ method, _ }) => {
-      if (method === "net_version"){
+      if (method === "eth_chainId"){
         if (chainId instanceof Error) throw chainId;
         return chainId.toString();
       }
