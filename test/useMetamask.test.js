@@ -135,6 +135,16 @@ describe("When Metamask Available", () => {
     expect(result.current.metaState.chain.name).toBe("kovan");
   });
 
+  test("should return sepiola chainName", async () => {
+    modifyListener(11155111);
+
+    const { result } = renderHook(() => useMetamask(), { wrapper });
+    await act(async () => {
+      await result.current.connect(Web3Interface);
+    });
+    expect(result.current.metaState.chain.name).toBe("sepiola");
+  });
+
   test("should return unknown chainName", async () => {
     modifyListener(999);
 
